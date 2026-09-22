@@ -11,7 +11,7 @@ This directory contains examples demonstrating core features of AgentScope Java 
 
 ### Build Examples
 
-
+主要基于 https://github.com/agentscope-ai/agentscope-java/tree/main/agentscope-examples 中的示例
 
 ## 📚 Examples Overview
 
@@ -19,6 +19,3 @@ This directory contains examples demonstrating core features of AgentScope Java 
 |---------|-------------|
 | **documentation** | Quick Start |
 
-## 📄 License
-
-Apache License 2.0 - See [LICENSE](../LICENSE) for details.

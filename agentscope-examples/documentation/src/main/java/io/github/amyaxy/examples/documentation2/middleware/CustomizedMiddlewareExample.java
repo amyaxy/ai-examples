@@ -19,12 +19,11 @@ import io.agentscope.core.tool.ToolEmitter;
 import io.agentscope.core.tool.ToolParam;
 import io.agentscope.core.tool.Toolkit;
 import io.github.amyaxy.examples.documentation2.utils.ModelUtils;
-import reactor.core.publisher.Flux;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import reactor.core.publisher.Flux;
 
 /**
  * HookExample - Demonstrates lifecycle monitoring via {@link MiddlewareBase}.
@@ -167,7 +166,7 @@ public class CustomizedMiddlewareExample {
         @Tool(name = "process_data", description = "Process a dataset and report progress")
         public String processData(
                 @ToolParam(name = "dataset_name", description = "Name of the dataset")
-                String datasetName,
+                        String datasetName,
                 ToolEmitter emitter) {
             System.out.println("[TOOL] Starting dataset processing: " + datasetName);
             try {

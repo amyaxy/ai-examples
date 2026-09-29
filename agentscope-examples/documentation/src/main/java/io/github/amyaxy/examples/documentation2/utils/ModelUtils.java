@@ -1,11 +1,7 @@
 package io.github.amyaxy.examples.documentation2.utils;
 
 import io.agentscope.core.model.Model;
-import io.agentscope.extensions.model.dashscope.DashScopeChatModel;
-import io.agentscope.extensions.model.dashscope.formatter.DashScopeChatFormatter;
 import io.agentscope.extensions.model.openai.OpenAIChatModel;
-import io.agentscope.extensions.model.openai.formatter.OpenAIChatFormatter;
-
 import java.util.Objects;
 
 /**
@@ -15,7 +11,6 @@ import java.util.Objects;
  * @since 2026/9/21
  */
 public class ModelUtils {
-
 
     public static Model buildOpenAIChatModel() {
 
@@ -27,11 +22,8 @@ public class ModelUtils {
         String openaiEndpointPath = System.getenv("OPENAI_ENDPOINT_PATH");
 
         OpenAIChatModel.Builder builder =
-                OpenAIChatModel.builder()
-                        .apiKey(openaiApiKey)
-                        .modelName(openaiModelName)
-                        .stream(Boolean.parseBoolean(openaiStream))
-                ;
+                OpenAIChatModel.builder().apiKey(openaiApiKey).modelName(openaiModelName).stream(
+                        Boolean.parseBoolean(openaiStream));
 
         if (Objects.nonNull(openaiBaseUrl)) {
             builder.baseUrl(openaiBaseUrl);
@@ -41,5 +33,4 @@ public class ModelUtils {
         }
         return builder.build();
     }
-
 }

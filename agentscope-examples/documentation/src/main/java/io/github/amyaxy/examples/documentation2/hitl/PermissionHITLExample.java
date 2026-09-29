@@ -16,7 +16,6 @@ import io.agentscope.core.tool.Tool;
 import io.agentscope.core.tool.ToolParam;
 import io.agentscope.core.tool.Toolkit;
 import io.github.amyaxy.examples.documentation2.utils.ModelUtils;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -203,7 +202,7 @@ public class PermissionHITLExample {
                 description = "Permanently delete a file (requires confirmation)")
         public String dangerousDelete(
                 @ToolParam(name = "path", description = "File path to delete permanently")
-                String path) {
+                        String path) {
             return "Deleted: " + path;
         }
     }

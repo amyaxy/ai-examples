@@ -51,8 +51,8 @@ public class PermissionContextExample {
         System.out.println("=".repeat(60));
         System.out.println(
                 "Demonstrates how PermissionContextState controls tool access.\n"
-                        + "Mode: DEFAULT (ask for everything unless a rule matches).\n"
-                        + "read_file → allow rule; write_file → ask rule; delete_file → deny rule.");
+                    + "Mode: DEFAULT (ask for everything unless a rule matches).\n"
+                    + "read_file → allow rule; write_file → ask rule; delete_file → deny rule.");
         System.out.println("=".repeat(60) + "\n");
 
         Toolkit toolkit = new Toolkit();
@@ -172,7 +172,7 @@ public class PermissionContextExample {
         public String writeFile(
                 @ToolParam(name = "path", description = "Absolute file path") String path,
                 @ToolParam(name = "content", description = "Text content to write")
-                String content) {
+                        String content) {
             return "Wrote " + content.length() + " chars to: " + path;
         }
 
@@ -185,7 +185,7 @@ public class PermissionContextExample {
         @Tool(name = "delete_file", description = "Permanently delete a file")
         public String deleteFile(
                 @ToolParam(name = "path", description = "Absolute file path to delete")
-                String path) {
+                        String path) {
             return "Deleted: " + path;
         }
     }

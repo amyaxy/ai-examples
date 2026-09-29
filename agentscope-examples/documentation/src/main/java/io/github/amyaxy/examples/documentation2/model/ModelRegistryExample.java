@@ -28,7 +28,8 @@ public class ModelRegistryExample {
                         + " needed.");
         System.out.println("=".repeat(60) + "\n");
 
-        ModelRegistry.register("openai:qwen3.7-flash-2026-07-15", ModelUtils.buildOpenAIChatModel());
+        ModelRegistry.register(
+                "openai:qwen3.7-flash-2026-07-15", ModelUtils.buildOpenAIChatModel());
 
         // ── 1. Check which providers are available ────────────────────────────────────
         //
@@ -37,7 +38,8 @@ public class ModelRegistryExample {
         System.out.println(
                 "Available provider extensions (requires corresponding module and env var):");
         System.out.println(
-                "  openai:qwen3.7-flash-2026-07-15  → " + ModelRegistry.canResolve("openai:qwen3.7-flash-2026-07-15"));
+                "  openai:qwen3.7-flash-2026-07-15  → "
+                        + ModelRegistry.canResolve("openai:qwen3.7-flash-2026-07-15"));
         System.out.println();
 
         // ── 2. Create an agent with just a model-ID string ────────────────────────────
@@ -50,7 +52,8 @@ public class ModelRegistryExample {
                 ReActAgent.builder()
                         .name("ModelStringDemo")
                         .sysPrompt("You are a concise assistant. Reply in one sentence.")
-                        .model("openai:qwen3.7-flash-2026-07-15") // ← the only thing needed to configure the
+                        .model("openai:qwen3.7-flash-2026-07-15") // ← the only thing needed to
+                        // configure the
                         // model
                         .build();
 

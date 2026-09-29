@@ -8,13 +8,10 @@ import io.agentscope.core.model.GenerateOptions;
 import io.agentscope.core.model.Model;
 import io.agentscope.core.model.ToolSchema;
 import io.agentscope.core.tool.Toolkit;
-import io.agentscope.extensions.model.dashscope.DashScopeChatModel;
-import io.agentscope.extensions.model.dashscope.formatter.DashScopeChatFormatter;
 import io.agentscope.harness.agent.middleware.AgentTraceMiddleware;
 import io.github.amyaxy.examples.documentation2.utils.ModelUtils;
-import reactor.core.publisher.Flux;
-
 import java.util.List;
+import reactor.core.publisher.Flux;
 
 /**
  * Structured output example using the {@code generate_response} tool fallback path.
@@ -42,7 +39,6 @@ public class StructuredOutputFallbackExample {
                         + "by wrapping the model to disable native structured output.\n"
                         + "It exercises the same code path as issue #1722.");
         System.out.println("=".repeat(60) + "\n");
-
 
         Model realModel = ModelUtils.buildOpenAIChatModel();
 

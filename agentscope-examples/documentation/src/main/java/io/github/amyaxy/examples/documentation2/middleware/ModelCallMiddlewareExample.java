@@ -9,16 +9,13 @@ import io.agentscope.core.message.Msg;
 import io.agentscope.core.message.UserMessage;
 import io.agentscope.core.middleware.MiddlewareBase;
 import io.agentscope.core.middleware.ModelCallInput;
-import io.agentscope.extensions.model.dashscope.DashScopeChatModel;
-import io.agentscope.extensions.model.dashscope.formatter.DashScopeChatFormatter;
 import io.agentscope.harness.agent.middleware.AgentTraceMiddleware;
 import io.github.amyaxy.examples.documentation2.utils.ModelUtils;
-import reactor.core.publisher.Flux;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.function.Function;
+import reactor.core.publisher.Flux;
 
 /**
  * ModelCallMiddlewareExample - Demonstrates intercepting the model API call via

@@ -15,12 +15,11 @@ import io.agentscope.core.tool.ToolCallParam;
 import io.agentscope.core.tool.Toolkit;
 import io.agentscope.harness.agent.middleware.AgentTraceMiddleware;
 import io.github.amyaxy.examples.documentation2.utils.ModelUtils;
-import reactor.core.publisher.Mono;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.List;
 import java.util.Map;
+import reactor.core.publisher.Mono;
 
 /**
  * ToolBaseExample - Demonstrates how to implement a custom tool by extending {@link ToolBase}.
@@ -119,7 +118,8 @@ public class ToolBaseExample {
                             .description("Get the current temperature for a city or location")
                             .inputSchema(
                                     Map.of(
-                                            "type", "object",
+                                            "type",
+                                            "object",
                                             "properties",
                                             Map.of(
                                                     "location",
@@ -130,7 +130,8 @@ public class ToolBaseExample {
                                                             "City or region name,"
                                                                     + " e.g."
                                                                     + " 'Shanghai'")),
-                                            "required", List.of("location")))
+                                            "required",
+                                            List.of("location")))
                             .readOnly(true) // does not modify any state
                             .concurrencySafe(true)); // safe to call in parallel
         }

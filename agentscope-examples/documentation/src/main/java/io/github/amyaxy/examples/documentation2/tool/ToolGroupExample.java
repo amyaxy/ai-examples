@@ -9,7 +9,6 @@ import io.agentscope.core.tool.ToolParam;
 import io.agentscope.core.tool.Toolkit;
 import io.agentscope.harness.agent.middleware.AgentTraceMiddleware;
 import io.github.amyaxy.examples.documentation2.utils.ModelUtils;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.nio.file.Files;

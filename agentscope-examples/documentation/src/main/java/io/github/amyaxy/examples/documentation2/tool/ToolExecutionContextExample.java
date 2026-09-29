@@ -9,7 +9,6 @@ import io.agentscope.core.tool.ToolParam;
 import io.agentscope.core.tool.Toolkit;
 import io.agentscope.harness.agent.middleware.AgentTraceMiddleware;
 import io.github.amyaxy.examples.documentation2.utils.ModelUtils;
-
 import java.util.List;
 
 /**
@@ -125,7 +124,7 @@ public class ToolExecutionContextExample {
         @Tool(name = "greet", description = "Greet the user with a custom greeting")
         public String greet(
                 @ToolParam(name = "greeting", description = "Greeting word, e.g. 'Hello'")
-                String greeting,
+                        String greeting,
                 UserContext userCtx) {
             String name = userCtx != null ? userCtx.username() : "unknown";
             return greeting + ", " + name + "!";

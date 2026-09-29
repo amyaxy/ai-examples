@@ -2,12 +2,13 @@ package io.github.amyaxy.examples.documentation2.streaming;
 
 import io.agentscope.core.ReActAgent;
 import io.agentscope.core.event.AgentEvent;
-import io.agentscope.core.event.TextBlockDeltaEvent;
 import io.agentscope.core.message.Msg;
 import io.agentscope.core.message.UserMessage;
 import io.agentscope.core.state.AgentStateStore;
 import io.agentscope.core.state.JsonFileAgentStateStore;
 import io.github.amyaxy.examples.documentation2.utils.ModelUtils;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,9 +18,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
 import reactor.core.scheduler.Schedulers;
-
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 /**
  * StreamingWebExample - Spring Boot + SSE streaming agent responses.
@@ -69,7 +67,7 @@ public class StreamingWebExample {
             System.out.println("  curl -N \"http://localhost:8080/chat?message=Hello\"");
             System.out.println(
                     "  curl -N"
-                            + " \"http://localhost:8080/chat?message=What+is+AI&sessionId=my-session\"");
+                        + " \"http://localhost:8080/chat?message=What+is+AI&sessionId=my-session\"");
             System.out.println("\nPress Ctrl+C to stop.\n");
         }
 
@@ -100,8 +98,7 @@ public class StreamingWebExample {
 
             Msg userMsg = new UserMessage(message);
 
-            return agent.streamEvents(userMsg)
-                    .subscribeOn(Schedulers.boundedElastic());
+            return agent.streamEvents(userMsg).subscribeOn(Schedulers.boundedElastic());
         }
 
         /**

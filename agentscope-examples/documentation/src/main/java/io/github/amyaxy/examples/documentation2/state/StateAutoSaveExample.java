@@ -6,7 +6,6 @@ import io.agentscope.core.message.UserMessage;
 import io.agentscope.core.state.AgentStateStore;
 import io.agentscope.core.state.JsonFileAgentStateStore;
 import io.github.amyaxy.examples.documentation2.utils.ModelUtils;
-
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -55,7 +54,6 @@ public class StateAutoSaveExample {
                         + "AgentStateStore data is stored in: "
                         + SESSION_DIR);
         System.out.println("=".repeat(60) + "\n");
-
 
         Path sessionDir = Paths.get(SESSION_DIR);
         Files.createDirectories(sessionDir);

@@ -9,11 +9,10 @@ import io.agentscope.core.message.UserMessage;
 import io.agentscope.core.middleware.MiddlewareBase;
 import io.agentscope.harness.agent.middleware.AgentTraceMiddleware;
 import io.github.amyaxy.examples.documentation2.utils.ModelUtils;
-import reactor.core.publisher.Mono;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.time.Instant;
+import reactor.core.publisher.Mono;
 
 /**
  * SystemPromptMiddlewareExample - Demonstrates injecting dynamic content into the system prompt

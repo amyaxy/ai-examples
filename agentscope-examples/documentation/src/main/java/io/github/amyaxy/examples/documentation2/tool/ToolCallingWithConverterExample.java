@@ -19,11 +19,8 @@ import io.agentscope.core.tool.ToolParam;
 import io.agentscope.core.tool.Toolkit;
 import io.agentscope.core.util.JsonSchemaUtils;
 import io.agentscope.core.util.JsonUtils;
-import io.agentscope.extensions.model.dashscope.DashScopeChatModel;
-import io.agentscope.extensions.model.dashscope.formatter.DashScopeChatFormatter;
 import io.agentscope.harness.agent.middleware.AgentTraceMiddleware;
 import io.github.amyaxy.examples.documentation2.utils.ModelUtils;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.lang.reflect.Type;
@@ -62,8 +59,8 @@ public class ToolCallingWithConverterExample {
         System.out.println("=".repeat(60));
         System.out.println(
                 "Demonstrates custom ToolResultConverters:\n"
-                        + "  - get_user_info: Masks sensitive fields (password, apiKey, creditCard)\n"
-                        + "  - list_orders:   Appends the JSON Schema of the return type");
+                    + "  - get_user_info: Masks sensitive fields (password, apiKey, creditCard)\n"
+                    + "  - list_orders:   Appends the JSON Schema of the return type");
         System.out.println("=".repeat(60) + "\n");
 
         Toolkit toolkit = new Toolkit();
@@ -562,4 +559,3 @@ public class ToolCallingWithConverterExample {
         }
     }
 }
-

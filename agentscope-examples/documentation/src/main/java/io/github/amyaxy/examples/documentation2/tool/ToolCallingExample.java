@@ -8,7 +8,6 @@ import io.agentscope.core.tool.ToolParam;
 import io.agentscope.core.tool.Toolkit;
 import io.agentscope.harness.agent.middleware.AgentTraceMiddleware;
 import io.github.amyaxy.examples.documentation2.utils.ModelUtils;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.time.LocalDateTime;
@@ -103,11 +102,11 @@ public class ToolCallingExample {
                 description = "Get the current time in a specific timezone")
         public String getCurrentTime(
                 @ToolParam(
-                        name = "timezone",
-                        description =
-                                "Timezone name, e.g., 'Asia/Tokyo', 'America/New_York',"
-                                        + " 'Europe/London'")
-                String timezone) {
+                                name = "timezone",
+                                description =
+                                        "Timezone name, e.g., 'Asia/Tokyo', 'America/New_York',"
+                                                + " 'Europe/London'")
+                        String timezone) {
             try {
                 ZoneId zoneId = ZoneId.of(timezone);
                 LocalDateTime now = LocalDateTime.now(zoneId);
@@ -127,9 +126,9 @@ public class ToolCallingExample {
         @Tool(name = "calculate", description = "Calculate simple math expressions")
         public String calculate(
                 @ToolParam(
-                        name = "expression",
-                        description = "Math expression, e.g., '123 + 456', '10 * 20'")
-                String expression) {
+                                name = "expression",
+                                description = "Math expression, e.g., '123 + 456', '10 * 20'")
+                        String expression) {
             try {
                 String expr = expression.replaceAll("\\s+", "");
                 double result;
@@ -173,4 +172,3 @@ public class ToolCallingExample {
         }
     }
 }
-

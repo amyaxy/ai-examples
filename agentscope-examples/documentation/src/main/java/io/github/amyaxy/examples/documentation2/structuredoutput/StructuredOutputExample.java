@@ -8,9 +8,8 @@ import io.agentscope.core.message.UserMessage;
 import io.agentscope.core.tool.Toolkit;
 import io.agentscope.harness.agent.middleware.AgentTraceMiddleware;
 import io.github.amyaxy.examples.documentation2.utils.ModelUtils;
-import reactor.core.publisher.Flux;
-
 import java.util.List;
+import reactor.core.publisher.Flux;
 
 /**
  * StructuredOutputExample - Demonstrates structured output generation.

@@ -24,7 +24,9 @@
     </developers>
 
     <modules>
-        <module>agentscope-examples</module>
+        <module>java/agentscope-java-examples</module>
+        <module>java/langchain4j-examples</module>
+        <module>java/spring-ai-examples</module>
     </modules>
 
     <properties>
